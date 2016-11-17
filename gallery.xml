@@ -1,0 +1,20 @@
+<?xml-stylesheet type="text/xsl" href="gallery.xsl"?>
+<gallery>
+  <article>
+    <title>Players meet Gemma Gibbons</title>
+    <date>June 2013</date>
+    <pic>GalleryPics/Photo-22-06-2013-13-32-16.jpg</pic>
+    <text>567 judo club players meet Gemma Gibbons, Olympic Silver Medalist, at the London Youth Games</text>
+  </article>
+  <article>
+    <title>Advice</title>
+    <pic>GalleryPics/P1030401.jpg</pic>
+  </article>
+  <article>
+    <title>Outdoor Judo</title>
+    <date>June 2010</date>
+    <pic>GalleryPics/2010.07.03.01.jpg</pic>
+    <pic>GalleryPics/boxes.png</pic>
+    <text>Judo demonstrated at the Fortismere School Fair</text>
+  </article>
+</gallery>

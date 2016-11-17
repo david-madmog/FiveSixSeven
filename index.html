@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>FiveSixSeven Judo Club</title>
+<meta name="google-site-verification" content="NtvswFun-khQZAV2qUYzjTU1ESIlINzHXrSc4DXv99c" />
+<meta name="verify-v1" content="9WWb1bVaPbJlliCzhjNC9/H3LSCSYhsNhSz54/pg/rE=" />
+<meta name="description" content="FiveSixSeven Judo Club Judo Club in North London affiliated to BJA" />
+<meta name="keywords" content="FiveSixSeven Judo Club, Five Six Seven Judo Club,Judo,Judo club,martial arts, Bounds Green Judo, Muswell Hill Judo, North London Judo, London Judo" />
+
+<link rel="stylesheet" href="fivesixseven.css">
+
+<script type="text/javascript" language="javascript">
+
+
+function menuClick(menuitem) {
+
+  // Show or hide the watermark depending if we're on the home page or not
+  var menupad=document.getElementById("menupad") ;
+  var logo=document.getElementById("watermark") ;
+
+  if (menuitem == "home") {
+    logo.style.display = "none" ;
+  } else {
+    logo.style.display = "block" ;
+  }
+
+
+  // now, scan through the main bodybody nodes, hiding all apart from the selected one
+  // Nodes are identified by ID attribute
+  var bodybody=document.getElementById("bodybody") ;
+
+  if ( bodybody.hasChildNodes() ) 
+  {
+    var children = bodybody.childNodes; 
+    for (var i = 0; i < children.length; i++) 
+    {
+      if (children[i].nodeType == 1) 
+      {
+        if (children[i].id == menuitem) 
+        {
+          // this is the one we want, so show it
+          children[i].style.display = "inline" ;
+          if (children[i].innerHTML.length == 0) 
+          {        
+            // not already loaded page... Load it now
+            LoadSpecificDoc ( children[i].id ) ;
+          }
+        } else {
+          children[i].style.display = "none" ;
+        }
+      }
+    }
+  }
+}
+
+
+
+function LoadSpecificDoc(FragmentID)
+// loads the various pages as they're needed, when selected on the menu
+{
+  switch(FragmentID) 
+  {
+    case 'news':
+      loadAndTransformXMLDoc("news.xml", "news.xsl", "news");
+      break;
+    case 'CandD':
+      loadHTMLDoc("CandD.htm", "CandD");
+      loadAndTransformXMLDoc("classes.xml", "classes.xsl", "classTimes");
+      loadAndTransformXMLDoc("dates.xml", "dates.xsl", "dates");
+      break;
+    case 'gallery':
+      loadAndTransformXMLDoc("gallery.xml", "gallery.xsl", "gallery");
+      break;
+    case 'aboutus':
+      loadHTMLDoc("aboutus.htm", "aboutus");
+      break;
+    case 'links':
+      loadHTMLDoc("links.htm", "links");
+      break;
+    case 'contact':
+      loadHTMLDoc("contact.htm", "contact");
+      break;
+    default:
+      alert("Unknown ID:"+FragmentID) ;
+  }
+}
+
+function PrintDoc()
+{
+  var w=window.open("joiningform.htm", "", "height=500, width=500, location=0, resizable=0, scrollbars=0, status=0, titlebar=0, toolbar=0", true) ;
+  w.print() ;
+//  w.close() ;
+
+}
+
+function loadXMLDoc(fname)
+{
+  var xmlhttp=false;
+/*@cc_on @*/
+/*@if (@_jscript_version >= 5)
+// JScript gives us Conditional compilation, we can cope with old IE versions.
+// and security blocked creation of the objects.
+  try {
+    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+    try {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (E) {
+      xmlhttp = false;
+    }
+  }
+@end @*/
+  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+    try {
+      xmlhttp = new XMLHttpRequest();
+    } catch (e) {
+      xmlhttp=false;
+    }
+  }
+  if (!xmlhttp && window.createRequest) {
+    try {
+      xmlhttp = window.createRequest();
+    } catch (e) {
+      xmlhttp=false;
+    }
+  }
+
+  try {
+    xmlhttp.open("get", fname, false ) ;
+    xmlhttp.send() ;
+  } catch(e){
+//    alert('An error has occurred: '+e.message)
+  }
+  return(xmlhttp.responseXML);
+}
+
+function loadAndTransformXMLDoc(XMLDoc, XSLDoc, FragmentID)
+{
+  try {
+    xml=loadXMLDoc(XMLDoc);
+    xsl=loadXMLDoc(XSLDoc);
+    if (window.ActiveXObject) {
+      ex=xml.transformNode(xsl);
+      document.getElementById(FragmentID).innerHTML=ex;
+    } else if (document.implementation && document.implementation.createDocument) {
+      xsltProcessor=new XSLTProcessor();
+      xsltProcessor.importStylesheet(xsl);
+      resultDocument = xsltProcessor.transformToFragment(xml,document);
+      document.getElementById(FragmentID).appendChild(resultDocument);
+    }
+  } catch(e) {
+//    alert('An error has occurred: '+e.message)
+  }
+}
+
+function loadHTMLDoc(HTMLDoc, FragmentID)
+{
+  try {
+// Don't forget, HTML IS also XML
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", HTMLDoc, false);
+    xmlhttp.send();
+
+    document.getElementById(FragmentID).innerHTML=xmlhttp.responseText;
+  } catch(e) {
+//    alert('An error has occurred: '+e.message)
+  }
+}
+
+function loadInitialPage() {
+  // We only load the home page on initial site load, rest of pages are loaded when requested
+  loadHTMLDoc("home.htm", "home");
+}
+
+</script>
+
+</head>
+<body onload="loadInitialPage();">
+  <div id = "watermark">
+    <img src="imgs/200px-Judo.svg.png" width="200" />
+  </div>
+
+  <div id = "menu">
+    <table><tr><td id="menupad">&nbsp;</td><td>
+    <table class="menubar"><tr>
+      <td class="pseudolink" onClick="menuClick('home');">Home</td>
+      <td class="pseudolink" onClick="menuClick('aboutus');">About</td>
+      <td class="pseudolink" onClick="menuClick('news');">Club News</td>
+      <td class="pseudolink" onClick="menuClick('gallery');">Gallery</td>
+      <td class="pseudolink" onClick="menuClick('CandD');">Classes and Dates</td>
+      <td class="pseudolink" onClick="menuClick('joiningform');">Joining form</td>
+      <td class="pseudolink" onClick="menuClick('links');">Links and Resources</td>
+      <td class="pseudolink" onClick="menuClick('contact');">Contact us</td>
+    </tr></table>
+    </td></tr></table>
+  </div>
+
+  <div id = "bod" class="bodyLeft">
+    <div id = "bodybody">
+
+      <div id="home" style="display:inline"></div>
+
+      <div id="aboutus" style="display:none"></div>
+
+      <div id = "news" style="display:none"></div>
+
+      <div id = "gallery" style="display:none"></div>
+
+      <div id = "CandD" style="display:none"></div>
+
+      <div id = "joiningform" style="display:none">
+
+        <p>If you are interested in joining, please fill in the following form:</p>
+
+        <script type="text/javascript" src="https://form.jotformeu.com/jsform/63133081359352"></script>
+
+        <p>Alternatively, if you prefer, you can print out the form below and bring it along to the session.</p>
+        <p><button type="button" onclick="PrintDoc()">Print the Form</button></p>
+        <iframe name="joinformframe" id="joinformframe" src="joiningform.htm" width="90%" height="70%" scrolling="auto"></iframe>
+      </div>
+
+      <div id = "links" style="display:none"></div>
+
+      <div id = "contact" style="display:none"></div>
+
+    </div>
+  </div>
+
+  <div id="Footer">
+    &copy; Five Six Seven Judo 2016
+  </div>
+
+</body>
+</html>

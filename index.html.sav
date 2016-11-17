@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>FiveSixSeven Judo Club</title>
+<meta name="google-site-verification" content="NtvswFun-khQZAV2qUYzjTU1ESIlINzHXrSc4DXv99c" />
+<meta name="verify-v1" content="9WWb1bVaPbJlliCzhjNC9/H3LSCSYhsNhSz54/pg/rE=" />
+<meta name="description" content="FiveSixSeven Judo Club Judo Club in North London affiliated to BJA" />
+<meta name="keywords" content="FiveSixSeven Judo Club, Five Six Seven Judo Club,Judo,Judo club,martial arts, Bounds Green Judo, Muswell Hill Judo, North London Judo, London Judo" />
+
+<link rel="stylesheet" href="fivesixseven.css">
+
+<script type="text/javascript" language="javascript">
+
+
+function menuClick(menuitem) {
+  var menu=document.getElementById("menu") ;
+  var body=document.getElementById("bod") ;
+
+  if (menuitem == "home") {
+    menu.style.display = "none" ; 
+    body.setAttribute("class", "bodyLeft") ;
+  } else {
+    menu.style.display = "inline" ;
+    body.setAttribute("class", "bodyMenu") ;
+  }
+
+  var bodybody=document.getElementById("bodybody") ;
+
+  if ( bodybody.hasChildNodes() ) {
+    var children = bodybody.childNodes; 
+    for (var i = 0; i < children.length; i++) {
+      if (children[i].nodeType == 1) {
+        if (children[i].id == menuitem) {
+          children[i].style.display = "inline" ;
+        } else {
+          children[i].style.display = "none" ;
+        }
+      }
+    }
+  }
+}
+
+function PrintDoc()
+{
+  var w=window.open("joiningform.htm", "", "height=500, width=500, location=0, resizable=0, scrollbars=0, status=0, titlebar=0, toolbar=0", true) ;
+  w.print() ;
+//  w.close() ;
+
+
+
+}
+
+function loadXMLDoc(fname)
+{
+  var xmlhttp=false;
+/*@cc_on @*/
+/*@if (@_jscript_version >= 5)
+// JScript gives us Conditional compilation, we can cope with old IE versions.
+// and security blocked creation of the objects.
+  try {
+    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+    try {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (E) {
+      xmlhttp = false;
+    }
+  }
+@end @*/
+  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+    try {
+      xmlhttp = new XMLHttpRequest();
+    } catch (e) {
+      xmlhttp=false;
+    }
+  }
+  if (!xmlhttp && window.createRequest) {
+    try {
+      xmlhttp = window.createRequest();
+    } catch (e) {
+      xmlhttp=false;
+    }
+  }
+
+  try {
+    xmlhttp.open("get", fname, false ) ;
+    xmlhttp.send() ;
+  } catch(e){
+    alert('An error has occurred: '+e.message)
+  }
+  return(xmlhttp.responseXML);
+}
+
+function loadAndTransformXMLDoc(XMLDoc, XSLDoc, FragmentID)
+{
+try {
+  xml=loadXMLDoc(XMLDoc);
+  xsl=loadXMLDoc(XSLDoc);
+  if (window.ActiveXObject) {
+    ex=xml.transformNode(xsl);
+    document.getElementById(FragmentID).innerHTML=ex;
+  } else if (document.implementation && document.implementation.createDocument) {
+    xsltProcessor=new XSLTProcessor();
+    xsltProcessor.importStylesheet(xsl);
+    resultDocument = xsltProcessor.transformToFragment(xml,document);
+    document.getElementById(FragmentID).appendChild(resultDocument);
+  }
+} catch(e) {
+    alert('An error has occurred: '+e.message)
+}
+}
+
+function loadHTMLDoc(HTMLDoc, FragmentID)
+{
+try {
+// Don't forget, HTML IS also XML
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", HTMLDoc, false);
+  xmlhttp.send();
+
+//  if (window.ActiveXObject) {
+    document.getElementById(FragmentID).innerHTML=xmlhttp.responseText;
+//  } else if (document.implementation && document.implementation.createDocument) {
+//    document.getElementById(FragmentID).appendChild(xmlhttp.responseText);
+//  }
+} catch(e) {
+    alert('An error has occurred: '+e.message)
+}
+}
+
+function loadXMLs() {
+
+  loadAndTransformXMLDoc("news.xml", "news.xsl", "news");
+  loadAndTransformXMLDoc("classes.xml", "classes.xsl", "classTimes");
+  loadAndTransformXMLDoc("dates.xml", "dates.xsl", "dates");
+  loadAndTransformXMLDoc("gallery.xml", "gallery.xsl", "gallery");
+  loadHTMLDoc("home.htm", "home");
+  loadHTMLDoc("aboutus.htm", "aboutus");
+  loadHTMLDoc("links.htm", "links");
+  loadHTMLDoc("contact.htm", "contact");
+}
+
+</script>
+
+</head>
+<body onload="loadXMLs();">
+  <div id="header">
+    <h1>Five Six Seven Judo Club</h1>
+  </div>
+
+  <div id = "menu" style="display:none">
+    <p><img alt="567 Judo Club North London Logo" src="imgs/Typo_02[1].png" Width="170" onClick="menuClick('home');"/></p>
+    <p class="pseudolink" onClick="menuClick('aboutus');">About Five Six Seven Judo club</p>
+    <p class="pseudolink" onClick="menuClick('news');">Club News</p>
+    <p class="pseudolink" onClick="menuClick('gallery');">Gallery</p>
+    <p class="pseudolink" onClick="menuClick('CandD');">Classes and Dates</p>
+    <p class="pseudolink" onClick="menuClick('joiningform');">Joining form</p>
+    <p class="pseudolink" onClick="menuClick('links');">Links and Resources</p>
+    <p class="pseudolink" onClick="menuClick('contact');">Contact us</p>
+  </div>
+
+  <div id = "bod" class="bodyLeft">
+    <div id = "bodybody">
+
+<div id="home" style="display:inline">
+</div>
+
+<div id="aboutus" style="display:none">
+</div>
+
+<div id = "news" style="display:none">
+</div>
+
+<div id = "gallery" style="display:none">
+</div>
+
+<div id = "CandD" style="display:none"> 
+  <div id = "classTimes">
+  </div>
+
+  <div id = "dates">
+  </div>
+
+  <hr/>
+  <h2>Location: Fortismere School South Gym</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.6481130630805!2d-0.15291768460836302!3d51.593012312261436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDM1JzM0LjgiTiAwwrAwOScwMi42Ilc!5e0!3m2!1sen!2suk!4v1476027641590" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+<div id = "joiningform" style="display:none">
+  <p>Please print out this form, fill it in and bring it to the first session.</p>
+  <p><button type="button" onclick="PrintDoc()">Print the Form</button></p>
+  <iframe name="joinformframe" id="joinformframe" src="joiningform.htm" width="90%" height="70%" scrolling="auto"></iframe>
+</div>
+
+<div id = "links" style="display:none">
+</div>
+
+<div id = "contact" style="display:none">
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>
