@@ -11,10 +11,14 @@
 </HEAD>
 <BODY>
   <xsl:for-each select="gallery/article">
-    <xsl:apply-templates select="title"/>
-    <xsl:apply-templates select="date"/>
+    <xsl:apply-templates select="*"/>
+
+
+<!--  <xsl:apply-templates select="date"/>
     <xsl:apply-templates select="text"/>
     <xsl:apply-templates select="pic"/>
+    
+!-->
     <hr />
   </xsl:for-each>
 </BODY>
@@ -34,6 +38,7 @@
 	  <xsl:attribute name="src">
   		<xsl:value-of select="." />
 		</xsl:attribute>
+	  <xsl:attribute name="class">GalleryImage</xsl:attribute>   
 	</xsl:element>
 </xsl:template>		
 
