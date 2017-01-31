@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="dates.xsl" ?>
+<dates>
+
+
+<section title="Spring 17">
+
+
+<month name="January">
+
+
+<date>7</date>
+
+<date>14</date>
+
+<date>21</date>
+
+<date>21</date>
+
+<date>28</date>
+
+</month>
+
+<month name="February">
+
+
+<date>4</date>
+
+<date>25</date>
+
+</month>
+
+<month name="March">
+
+
+<date>4</date>
+
+<date>11</date>
+
+<date>18</date>
+
+<date>25</date>
+
+</month>
+
+<recommences>September</recommences>
+</section><section title="Grading">
+	<text>Mon grades termly, Kyu grades TBA</text>
+</section>
+<section title="Competition">
+	<text>London Youth Games: 21 Jun 2014</text>
+</section>
+</dates>
+
+
