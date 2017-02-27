@@ -1,6 +1,15 @@
 <?xml-stylesheet type="text/xsl" href="news.xsl"?>
 <news>
   <article>
+    <title>Chalfont Championship</title>
+    <date>18 March 2017</date>
+    <body>
+      <text>567 Judo club will be taking a team to the Chalfont Championship, hosted by the Chalfont and Evreham Judokwai
+      </text>
+	<link href="http://www.bjcjudoevents.org.uk/registrations/22">Championship site here</link>
+    </body>
+  </article>
+  <article>
     <title>Website Refresh</title>
     <date>October 2016</date>
     <body>

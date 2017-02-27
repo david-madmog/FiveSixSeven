@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="dates.xsl" ?>
 <dates>
-
 <section title="Spring 17">
 <month name="January">
-<date>7</date>
-<date>14</date>
-<date>21</date>
-<date>28</date>
+<date> 7</date>
+<date> 14</date>
+<date> 21</date>
+<date> 28</date>
 </month>
-
 <month name="February">
-<date>4</date>
-<date>25</date>
+<date> 4</date>
+<date> 25</date>
 </month>
-
 <month name="March">
-<date>4</date>
-<date>11</date>
-<date>18</date>
-<date>25</date>
-
+<date> 4</date>
+<date> 11</date>
+<date> 18</date>
+<date> 25</date>
 </month>
-
 <recommences>Saturday April 22nd</recommences>
-</section><section title="Grading">
-	<text>Saturday 21 January</text>
+</section>
+<section title="Grading">
+<text>January 21</text>
 </section>
 <section title="Competition">
-	<text>TBA</text>
+<text>March 18 Chalfont Budokwai</text>
 </section>
 </dates>
-
-
