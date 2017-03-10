@@ -34,12 +34,20 @@
 </xsl:template>		
 	
 <xsl:template match="pic">
-  <xsl:element name="img">
-	  <xsl:attribute name="src">
-  		<xsl:value-of select="." />
-		</xsl:attribute>
-	  <xsl:attribute name="class">GalleryImage</xsl:attribute>   
-	</xsl:element>
+  <xsl:element name="a">
+    <xsl:attribute name="href">
+      <xsl:value-of select="." />
+    </xsl:attribute>
+    <xsl:attribute name="target">
+      _blank
+    </xsl:attribute>    
+    <xsl:element name="img">
+	    <xsl:attribute name="src">
+  		  <xsl:value-of select="." />
+		  </xsl:attribute>
+	    <xsl:attribute name="class">GalleryImage</xsl:attribute>   
+	  </xsl:element>
+  </xsl:element>
 </xsl:template>		
 
 <xsl:template match="text">
