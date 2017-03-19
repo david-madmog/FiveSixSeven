@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="dates.xsl" ?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="datescompact.xsl" ?>
 <dates>
-<section title="Spring 17">
-<month name="January">
-<date> 7</date>
-<date> 14</date>
-<date> 21</date>
-<date> 28</date>
+<section title="Summer 17">
+<month name="April">
+<date> 22</date>
+<date> 29</date>
 </month>
-<month name="February">
-<date> 4</date>
-<date> 25</date>
+<month name="May">
+<date> 6</date>
+<date> 13</date>
+<date> 20</date>
 </month>
-<month name="March">
-<date> 4</date>
-<date> 11</date>
-<date> 18</date>
-<date> 25</date>
+<month name="June">
+<date> 10</date>
+<date> 17</date>
+<date> 24</date>
 </month>
-<recommences>Saturday April 22nd</recommences>
+<month name="July">
+<date> 1</date>
+<date> 8</date>
+<date> 15</date>
+</month>
+<recommences>September</recommences>
 </section>
 <section title="Grading">
-<text>January 21</text>
-</section>
-<section title="Competition">
-<text>March 18 Chalfont Budokwai</text>
+<text>TBA</text>
 </section>
 </dates>
