@@ -57,6 +57,7 @@
   		<xsl:value-of select="." />
 		</xsl:attribute>
 	</xsl:element>
+   &#160;
 </xsl:template>		
 
 <xsl:template match="embed">

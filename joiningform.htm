@@ -5,75 +5,18 @@
 <head>
 <title>Joining Form</title>
 <link rel="stylesheet" href="fivesixseven.css">
+<script type="text/javascript" src="loader.js"></script>
+<script type="text/javascript" language="javascript">
 
-<script>
-
-function loadXMLDoc(fname)
-{
-  var xmlhttp=false;
-/*@cc_on @*/
-/*@if (@_jscript_version >= 5)
-// JScript gives us Conditional compilation, we can cope with old IE versions.
-// and security blocked creation of the objects.
-  try {
-    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-  } catch (e) {
-    try {
-      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    } catch (E) {
-      xmlhttp = false;
-    }
-  }
-@end @*/
-  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-    try {
-      xmlhttp = new XMLHttpRequest();
-    } catch (e) {
-      xmlhttp=false;
-    }
-  }
-  if (!xmlhttp && window.createRequest) {
-    try {
-      xmlhttp = window.createRequest();
-    } catch (e) {
-      xmlhttp=false;
-    }
-  }
-
-  try {
-    xmlhttp.open("get", fname, false ) ;
-    xmlhttp.send() ;
-  } catch(e){
-    alert('An error has occurred: '+e.message)
-  }
-  return(xmlhttp.responseXML);
+function loadInitialPage() {
+  LoadFilesInSeq(100) ; 
+  
 }
 
-function loadAndTransformXMLDoc(XMLDoc, XSLDoc, FragmentID)
-{
-  xml=loadXMLDoc(XMLDoc);
-  xsl=loadXMLDoc(XSLDoc);
-  if (window.ActiveXObject) {
-    ex=xml.transformNode(xsl);
-    document.getElementById(FragmentID).innerHTML=ex;
-  } else if (document.implementation && document.implementation.createDocument) {
-    xsltProcessor=new XSLTProcessor();
-    xsltProcessor.importStylesheet(xsl);
-    resultDocument = xsltProcessor.transformToFragment(xml,document);
-    document.getElementById(FragmentID).appendChild(resultDocument);
-  }
-}
-
-
-function loadXMLs() {
-  loadAndTransformXMLDoc("classes.xml", "classescompact.xsl", "classes");
-  loadAndTransformXMLDoc("dates.xml", "datescompact.xsl", "dates");
-}
 </script>
 
 </head>
-
-<body class="joinform" onload="loadXMLs();"> 
+<body class="joinform" onload="loadInitialPage();"> 
 
 <h1>Five Six Seven Judo Club</h1>
 <h2>Enrolment Form</h1>
@@ -88,7 +31,7 @@ function loadXMLs() {
   <tr><td>&nbsp;</td></tr>
 </table>
 
-<div id = "classes"></div>
+<div id = "JFclasses"></div>
 
 <h2>Contact Details</h2>
 
@@ -119,7 +62,7 @@ function loadXMLs() {
 <hr>
 <h2>Please retain this section for your records</h2>
 
-<div id = "dates"></div>
+<div id = "JFdates"></div>
 <p/>
 <p>
 <table summary="">
