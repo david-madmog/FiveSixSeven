@@ -1,28 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="datescompact.xsl" ?>
-<dates>
-<section title="Summer 17">
-<month name="April">
-<date> 22</date>
-<date> 29</date>
-</month>
-<month name="May">
-<date> 6</date>
-<date> 13</date>
-<date> 20</date>
-</month>
-<month name="June">
-<date> 10</date>
-<date> 17</date>
-<date> 24</date>
-</month>
-<month name="July">
-<date> 1</date>
-<date> 8</date>
-<date> 15</date>
-</month>
-<recommences>September</recommences>
-</section>
-<section title="Grading">
-<text>TBA</text>
-</section>
-</dates>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="datescompact.xsl" ?>
+<dates><section title="Autumn 17"><month name="September"><date> 9</date><date> 16</date><date> 23</date><date> 30</date></month><month name="October"><date> 7</date><date> 14</date></month><month name="November"><date> 4</date><date> 11</date><date> 18</date><date> 25</date></month><month name="December"><date> 2</date><date> 9</date></month><recommences>06/01/2018</recommences></section><section title="Grading"><text>TBA</text></section></dates>
