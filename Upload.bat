@@ -6,5 +6,5 @@ echo synchronize remote -filemask="| *.bat; *.dat; .*; _*; .*/; _*/">>ftpcmd.dat
 ::echo ls>> ftpcmd.dat
 echo exit>> ftpcmd.dat
 
-winscp /script=ftpcmd.dat 
+winscp /script=ftpcmd.dat > upload.log
 del ftpcmd.dat

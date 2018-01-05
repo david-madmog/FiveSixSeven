@@ -111,10 +111,10 @@ function LoadFilesInSeq(fileSeq)
 		loadAndTransformXMLDoc("gallery.xml", "gallery.xsl", "gallery", fileSeq);
 		break;
     case 6:
-		loadHTMLDoc("aboutus.htm", "aboutus", fileSeq);
+		loadHTMLDoc("links.htm", "links", fileSeq);
 		break;
     case 7:
-		loadHTMLDoc("links.htm", "links", fileSeq);
+		loadHTMLDoc("aboutus.htm", "aboutus", fileSeq);
 		break;
     case 8:
 		loadHTMLDoc("contact.htm", "contact", fileSeq);
