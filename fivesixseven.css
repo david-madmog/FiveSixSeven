@@ -80,6 +80,12 @@ h2 {
   clear: left;
 }
 
+.DateCell
+{
+	padding-left: 10;
+	padding-right: 10;
+}
+
 .menubar
 {
     background-color: #E1F5FE;

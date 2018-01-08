@@ -1,0 +1,13 @@
+Connecting to ftp.fivesixsevenjudo.co.uk ...
+Connected
+Starting the session...
+Session started.
+Active session: [1] fivesixsevenjudo.co.uk@ftp.fivesixsevenjudo.co.uk
+transfer        binary    
+/htdocs
+Comparing...
+Local 'C:\Users\davidp\Documents\GitHub\FiveSixSeven\resources' => Remote '/htdocs/resources'
+Synchronizing...
+Local 'C:\Users\davidp\Documents\GitHub\FiveSixSeven' => Remote '/htdocs'
+C:\Users\davidp\Documents\GitHub\FiveSixSeven\aboutus.htm |           9 KB |    0.0 KB/s | binary | 100%
+C:\Users\davidp\Documents\GitHub\FiveSixSeven\upload.log |          410 B |    3.2 KB/s | binary | 100%

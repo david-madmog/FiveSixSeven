@@ -32,7 +32,7 @@
 </xsl:template>
 
 <xsl:template match="date">
-	<td>
+	<td class="DateCell">
 	<xsl:value-of select="." />
 	</td>
 </xsl:template>	
