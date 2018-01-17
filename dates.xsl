@@ -33,16 +33,15 @@
 
 <xsl:template match="date">
 	<td class="DateCell">
-	<xsl:value-of select="." />
+		<xsl:value-of select="." />
 	</td>
 </xsl:template>	
 
 <xsl:template match="text">
-	<tr><td  colspan="4">
+	<tr><td colspan="4">
 	<xsl:value-of select="." />
 	</td></tr>
 </xsl:template>	
-
 
 <xsl:template match="recommences">
   <tr><td colspan="4">

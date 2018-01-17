@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="datescompact.xsl" ?>
-<dates><section title="Spring 18"><month name="January"><date> 6</date><date> 13</date><date> 20</date><date> 27</date></month><month name="February"><date> 3</date><date> 25</date></month><month name="March"><date> 3</date><date> 10</date><date> 17</date><date> 24</date></month></section></dates>
+<dates>
+	<section title="Spring 18">
+		<month name="January"><date> 6</date><date> 13</date><date> 20</date><date> 27</date></month>
+		<month name="February"><date> 3</date><date> 24</date></month>
+		<month name="March"><date> 3</date><date> 10</date><date> 17</date><date> 24</date></month>
+		<recommences>21/04/2018</recommences>
+	</section>
+	<section title="Competition">
+		<text>March  10 (TBC)</text>
+	</section>
+</dates>

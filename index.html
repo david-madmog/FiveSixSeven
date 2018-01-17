@@ -29,6 +29,7 @@ function menuClick(menuitem) {
   // now, scan through the main bodybody nodes, hiding all apart from the selected one
   // Nodes are identified by ID attribute
   var bodybody=document.getElementById("bodybody") ;
+  var gotOne = false;
 
   if ( bodybody.hasChildNodes() ) 
   {
@@ -41,11 +42,17 @@ function menuClick(menuitem) {
         {
           // this is the one we want, so show it
           children[i].style.display = "inline" ;
+		  // And record we got at least one...
+		  gotOne = true;
         } else {
           children[i].style.display = "none" ;
         }
       }
     }
+  }
+  
+  if (! gotOne) {
+	menuClick("home");
   }
 }
 
@@ -57,9 +64,26 @@ function PrintDoc()
 
 }
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function SwitchPage() {
+	var page = getParameterByName("Page") ;
+	if (page)
+		menuClick(page) ;
+}
+
 function loadInitialPage() {
   LoadFilesInSeq(0) ; 
   
+  SwitchPage();
 }
 
 </script>
