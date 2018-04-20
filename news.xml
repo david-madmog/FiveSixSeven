@@ -1,6 +1,31 @@
 <?xml-stylesheet type="text/xsl" href="news.xsl"?>
 <news>
   <article>
+    <title>Another Qualified Coach</title>
+    <date>4 April 2018</date>
+    <body>
+		<text>Sam Poirier, having trained with Five Six Seven Judo for over ten years, has now completed his qualification as a UKCC Level 1 coach certified by the BJA</text>
+		<pic>./NewsPics/IMG_2828.JPG</pic>
+		<text>The club and all its members congratulate Sam on this achievement and formally welcome him to the coaching ranks, where he has been informally assisting for some time.</text>
+		<text />
+    </body>
+  </article>
+
+  <article>
+    <title>Chalfont Championship Again</title>
+    <date>10 March 2018</date>
+    <body>
+		<text>Another successful Chalfont Championship</text>
+		<text>Two Gold, a Silver and seven bronze medals for FiveSixSeven members</text>
+		<pic>./NewsPics/I20180310-4.jpg</pic>
+		<pic>./NewsPics/I20180310-3.jpg</pic>
+		<pic>./NewsPics/I20180310-2.jpg</pic>
+		<pic>./NewsPics/I20180310-1.jpg</pic>
+		<text />
+    </body>
+  </article>
+
+  <article>
     <title>Chalfont Championship</title>
     <date>18 March 2017</date>
     <body>
@@ -29,17 +54,4 @@
 	<link href="http://www.youtube.com/channel/UCzxn6mLxJShpnIkuX9X8dog">Youtube channel here</link>
     </body>
   </article>
-
-  <article>
-    <title>567 Judo club Members attend Southend international</title>
-    <date>Saturday 26th October and Sunday 27th October 2013</date>
-    <body>
-      <text>567 Judo players attend the 4th Southend International Judo Championships.
-      </text>
-<pic>./NewsPics/P1030401.JPG</pic>
-<text>Members of the club faced some stiff opposition with a very high standard of Judo displayed throughout</text>
-<text>More pictures and videos to follow</text>
-    </body>
-  </article>
-
 </news>
