@@ -8,6 +8,6 @@ rem NOTE: image size Will only act on PNG's
 
 cd C:\Program Files\GIMP 2\bin
 
-gimp-2.8 -d -f -s -i -b "(batch-image-resize-2 \"C:\\Users\\davidp\\Documents\\GitHub\\FiveSixSeven\\GalleryPics\\P1050515.jpg\" 400 )" -b "(gimp-quit 0)"
+gimp-2.8 -d -f -s -i -b "(batch-image-resize-2 \"C:\\Users\\davidp\\Documents\\GitHub\\FiveSixSeven\\NewsPics\\LYG*.jpg\" 400 )" -b "(gimp-quit 0)"
 
 

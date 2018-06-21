@@ -1,6 +1,30 @@
 <?xml-stylesheet type="text/xsl" href="news.xsl"?>
 <news>
   <article>
+    <title>London Youth Games</title>
+    <date>16 June 2018</date>
+    <body>
+		<text>A number of club members fight for Haringey at the 2018 London youth Games</text>
+		<pic>./NewsPics/LYG-18-1.JPG</pic>
+		<pic>./NewsPics/LYG-18-2.JPG</pic>
+		<pic>./NewsPics/IMG_4044.JPG</pic>
+		<text>Sam wins a Bronze medal. Congratulations!</text>
+		<text />
+    </body>
+  </article>
+
+  <article>
+    <title>Tsu-Mo-Kie Competition</title>
+    <date>10 June 2018</date>
+    <body>
+		<text>Gabriel fights in the Tsu-Mo-Kie competition in Waltham abbey, and wins a silver medal</text>
+		<pic>./NewsPics/BM8.JPG</pic>
+		<text>(Photo Credits Steen Brix Eriksen)</text>
+		<text />
+    </body>
+  </article>
+
+  <article>
     <title>Another Qualified Coach</title>
     <date>4 April 2018</date>
     <body>
@@ -11,6 +35,7 @@
     </body>
   </article>
 
+  
   <article>
     <title>Chalfont Championship Again</title>
     <date>10 March 2018</date>

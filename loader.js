@@ -63,17 +63,18 @@ function TransformXMLDoc(XMLDocXML, XSLDocXML, FragmentID, fileSeq)
 }
 
 function loadHTMLDoc(HTMLDoc, FragmentID, fileSeq)
-{
+{	
   try {
     console.log ('HTML GO:' + FragmentID + ' HTML:' + HTMLDoc);
 
 	// Don't forget, HTML IS also XML
     var xmlhttp = new XMLHttpRequest();
-	
-	xmlhttp.onloadend = function() {
+
+//		xmlhttp.onloadend = function() {
+	xmlhttp.onreadystatechange = function() {
 		document.getElementById(FragmentID).innerHTML=xmlhttp.responseText;
 		// Scan new document for twitter stuff
-		twttr.widgets.load(document.getElementById(FragmentID));
+//		twttr.widgets.load(document.getElementById(FragmentID));
 		LoadFilesInSeq(fileSeq + 1);
 	};
 
