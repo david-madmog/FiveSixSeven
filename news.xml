@@ -1,6 +1,16 @@
 <?xml-stylesheet type="text/xsl" href="news.xsl"?>
 <news>
   <article>
+    <title>More Coaching news</title>
+    <date>11 November 2018</date>
+    <body>
+		<text>Thomas also gains his BJA coaching qualification, taking the number of active coaches up to Four</text>
+		<pic>./NewsPics/IMG_3189.JPG</pic>
+		<text />
+    </body>
+  </article>
+
+  <article>
     <title>London Youth Games</title>
     <date>16 June 2018</date>
     <body>
